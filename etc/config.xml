@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<magetunisia_importexport>
+			<fields_general>
+				<delimiter>,</delimiter>
+				<log_file>magetunisia_importexport.log</log_file>
+			</fields_general>
+		</magetunisia_importexport>
+	</default>
+</config>

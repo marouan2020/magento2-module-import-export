@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+    <tab id="MageTunisia" translate="label" sortOrder="10">
+      <label>MageTunisia</label>
+    </tab>
+    <section id="magetunisia_importexport" translate="label" sortOrder="1" showInStore="1" showInDefault="1" showInWebsite="1">
+      <class>separator-top</class>
+      <label>Import / Export</label>
+      <tab>MageTunisia</tab>
+      <resource>MageTunisia_ImportExport::import_export</resource>
+      <group id="fields_general" translate="label" sortOrder="1" showInDefault="1" showInStore="1" showInWebsite="1">
+        <label>General</label>
+        <field id="activate" type="select" translate="label" sortOrder="1" showInDefault="1" showInStore="1" showInWebsite="1" >
+          <label>Enable:</label>
+          <validate>required-entry</validate>
+          <comment/>
+          <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+        </field>
+        <field id="delimiter" type="text" translate="label" sortOrder="2" showInDefault="1" showInStore="1" showInWebsite="1" >
+          <label>Delimiter:</label>
+          <validate>required-entry</validate>
+          <comment/> 
+        </field>
+        <field id="attributesetid" translate="label comment" sortOrder="1" type="multiselect" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Attribute Set ID</label>
+            <validate>required-entry</validate>
+            <source_model>Magento\Catalog\Model\Product\AttributeSet\Options</source_model>
+        </field>
+        <field id="product_type" translate="label comment" sortOrder="8" type="multiselect" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Product Type For Import</label>
+            <validate>required-entry</validate>
+            <source_model>MageTunisia\ImportExport\Model\Config\Source\Producttype</source_model>
+        </field>
+        <field id="log_file" type="text" translate="label" sortOrder="2" showInDefault="1" showInStore="1" showInWebsite="1" >
+          <label>Logger file:</label>
+          <validate>required-entry</validate>
+          <comment>Default path: /var/log/magetunisia_importexport.log</comment> 
+        </field>
+      </group>
+      <group id="fields_product" translate="label" sortOrder="2" showInDefault="1" showInStore="1" showInWebsite="1">
+          <label>Product</label>
+          <field id="upload_file" type="Magento\Config\Block\System\Config\Form\Field\File" translate="label" sortOrder="1" showInDefault="1" showInStore="1" showInWebsite="1" >
+              <label>Upload file:</label>
+              <comment>Allowed files: csv.</comment>
+              <backend_model>MageTunisia\ImportExport\Model\Config\Backend\ImportExportFile</backend_model>
+              <upload_dir config="system" scope_info="1">importexport</upload_dir>
+          </field>
+          <field id="mapping_store" type="text" translate="label" sortOrder="2" showInDefault="1" showInStore="1" showInWebsite="1" >
+              <label>Store:</label>
+              <comment/>
+          </field>
+          <field id="mapping_product_type" translate="label comment" sortOrder="3" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Mapping Field product Type</label>
+              <comment/>
+          </field>
+          <field id="mapping_attributes_sets" translate="label comment" sortOrder="4" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+              <label>Mapping Field Attribute Set</label>
+              <comment/>
+          </field>
+      </group>
+    </section>
+  </system>	
+</config>

@@ -1,0 +1,25 @@
+{
+    "name": "magetunisia/module-importexport",
+    "description": "Batch processing allows you to process a large number of Data in a fraction of the time it would take to process the import manually. ",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Ben Mansour Marouan",
+            "email": "marouan.ben.mansour@gmail.com",
+            "homepage": "http://marouan-ben-mansour.com/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MageTunisia\\ImportExport\\": ""
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+  <type name="Magento\Framework\Console\CommandList">
+    <arguments>
+      <argument name="commands" xsi:type="array">
+        <item name="Import" xsi:type="object">MageTunisia\ImportExport\Console\Command\Import</item>
+      </argument>
+    </arguments>
+  </type>
+  <preference for="MageTunisia\ImportExport\Api\Service\AddProductManagementInterface" type="MageTunisia\ImportExport\Model\Service\AddProductManagement" />
+  <type name="Magento\Config\Model\Config\Structure\Data">
+     <plugin name="field_mapping_dynamic" type="MageTunisia\ImportExport\Plugin\Config\Field\Data"/>
+  </type>
+</config>
