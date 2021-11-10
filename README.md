@@ -15,3 +15,9 @@ Command-Line Importer allows you to import and export data using Magento 2 SSH c
     Follows Magento best practices and can be customized by other developers as needed
     Sample files for import/update added with extension
     Free Support and troubleshooting
+    
+# 1.0.0-beta:
+    Compatible with Open Source (CE) : 2.4 and Less
+    Stability: Stable Build
+    Description:
+    Import Products Using Command Line.
