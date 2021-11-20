@@ -1,2 +1,78 @@
-# magento2-module-import-export
-Command-Line Importer allows you to import and export data using Magento 2 SSH commands. You can schedule cron jobs to import unlimited products into your store. When the store owner wants to change their websites into new ones, they have to manually add a lot of products on the new sites again. You can't upload large size products CSV file using Magento 2 and, this process can take a lot of time and human resources to do. To overcome this drawback of default Magento 2, this extension for Magento 2 is developed to help import large size Products file using Magento 2.  This extension directly fetches the images from the provided folder URL so it is a very easy, convenient, and time-saving process. You can also see the import history of your scheduled cron jobs with current status under the Magento import history in the admin. Also, you can upload all types of products (simple, configurable, etc...) with multiple images and videos. This extension will allow you to update product data which was already added.
+# ConfigImportExport
+
+This module provides new CLI commands for Magento 2 to import/export data in/from core_config_data.
+
+This module is inspired by the awesome n98-magerun plugin "HarrisStreet ImpEx" by @SchumacherFM for Magento 1 which you can find [here](https://github.com/Zookal/HarrisStreet-ImpEx).
+
+## Installation
+
+**Add the package to your composer.json**
+
+```bash
+composer require MageTunisia/magento2-configimportexport
+```
+
+
+**Enable and install the module**
+
+```bash
+php bin/magento module:enable MageTunisia_ConfigImportExport
+php bin/magento setup:upgrade
+```
+
+
+## Facts
+
+* Supported Magento versions are 2.3 and 2.4
+* Supported PHP versions are 7.2, 7.3 and 7.4
+
+
+## Functionality
+
+This module is a work in progress and will be extended in the future with more functionality
+and support for other file formats.
+
+
+### File formats
+
+This module currently supports the following file formats:
+
+* YAML (default)
+* JSON
+
+See [docs/file-formats.md](docs/file-formats.md) for more information and examples.
+
+
+### Import config data
+
+See [docs/config-import.md](docs/config-import.md) for more information.
+
+
+### Export config data
+
+See [docs/config-export.md](docs/config-export.md) for more information.
+
+
+## Support
+
+If you encounter any problems or bugs, please create an issue on [GitHub](https://github.com/MageTunisia/Magento2-ConfigImportExport/issues).
+
+
+## Contribution
+
+Any contribution to the development of MageSetup is highly welcome. The best possibility to provide any code is to open a [pull request on GitHub](https://help.github.com/articles/using-pull-requests).
+
+
+## Licence
+
+[Open Software License (OSL 3.0)](http://opensource.org/licenses/osl-3.0.php)
+
+
+## Contributors
+
+Thanks to all [contributors](https://github.com/MageTunisia/Magento2-ConfigImportExport/graphs/contributors) who invested their valuable time to contribute to this module. Much appreciated!
+
+
+## Copyright
+
+(c) 2016-2020 MageTunisia BEN MANSOUR MAROUAN
